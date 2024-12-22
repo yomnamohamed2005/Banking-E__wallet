@@ -73,6 +73,11 @@ namespace Banking_E_Wallet.Controllers
 
             return View();
         }
+        public new IActionResult SignOut()
+        {
+            _signin.SignOutAsync();
+            return RedirectToAction(nameof(login));
+        }
 
     }
 }

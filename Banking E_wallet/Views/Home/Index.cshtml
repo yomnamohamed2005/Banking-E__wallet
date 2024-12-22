@@ -3,13 +3,12 @@
 }
 @section Styles {
     <link href="~/css/style.css" rel="stylesheet" />
-
-    <link href="~/javascript/script.js" />
+    <script src="~/javascript/script.js"></script>
 }
 
 <nav>
 
-    <form class="login" action="login" method="post">
+    <form class="login" action="@Url.Action("login", "user") method="post">
         <span class="signUp signUp-hidden"> SIGN UP</span>
 
         <input type="text"

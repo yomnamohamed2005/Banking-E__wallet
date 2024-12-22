@@ -4,6 +4,7 @@ using Data_Access_Layer.models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Update;
 using Microsoft.Identity.Client;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using static Banking_E_Wallet.Controllers.accountcontroller;
 
 namespace Banking_E_Wallet.Controllers 
@@ -241,7 +242,7 @@ namespace Banking_E_Wallet.Controllers
             }
 
         }
-  
+
 
     }
 }
