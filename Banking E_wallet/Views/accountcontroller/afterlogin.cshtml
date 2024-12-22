@@ -6,34 +6,40 @@
     <script src="~/javascript/script.js"></script>
     <link href="~/css/style.css" rel="stylesheet" />
 }
+<nav>
+    <div class="operation operation--withdraw">
+        <h2>Withdraw Money</h2>
+        <form class="form form--withdraw" action="@Url.Action("withdraw", "account")" method="post">
+            <input type="number" class="form_input form_input--withdraw-amount" placeholder="Amount" name="amount" />
+            <button type="submit" class="form_btn form_btn--withdraw">→</button>
+        </form>
+    </div>
+</nav>
 
-<div class="operation operation--withdraw">
-    <h2>Withdraw Money</h2>
-    <form class="form form--withdraw" action="@Url.Action("withdraw", "account")" method="post">
-        <input type="number" class="form_input form_input--withdraw-amount" placeholder="Amount" name="amount" />
-        <button type="submit" class="form_btn form_btn--withdraw">→</button>
-    </form>
-</div>
+<nav>
+    <div class="operation operation--loan">
+        <h2>Request loan</h2>
+        <form class="form form--loan" action="@Url.Action("loan", "account")" method="post">
+            <input type="number" class="form_input form_input--loan-amount" name="loanAmount" />
+            <button type="submit" class="form_btn form_btn--loan">&rarr;</button>
+            <label class="form_label form_label--loan">Amount</label>
+        </form>
+    </div>
+</nav>
 
-<div class="operation operation--loan">
-    <h2>Request loan</h2>
-    <form class="form form--loan" action="@Url.Action("loan", "account")" method="post">
-        <input type="number" class="form_input form_input--loan-amount" name="loanAmount" />
-        <button type="submit" class="form_btn form_btn--loan">&rarr;</button>
-        <label class="form_label form_label--loan">Amount</label>
-    </form>
-</div>
+<nav>
+    <div class="operation operation--transfer">
+        <h2>Transfer money</h2>
+        <form class="form form--transfer" action="@Url.Action("transfer", "account")" method="post">
+            <input type="text" class="form_input form_input--to" name="toAccount" />
+            <input type="number" class="form_input form_input--amount" name="amount" />
+            <button type="submit" class="form_btn form_btn--transfer">&rarr;</button>
+            <label class="form__label">Transfer to</label>
+            <label class="form__label">Amount</label>
+        </form>
+    </div>
+</nav>
 
-<div class="operation operation--transfer">
-    <h2>Transfer money</h2>
-    <form class="form form--transfer" action="@Url.Action("transfer", "account")" method="post">
-        <input type="text" class="form_input form_input--to" name="toAccount" />
-        <input type="number" class="form_input form_input--amount" name="amount" />
-        <button type="submit" class="form_btn form_btn--transfer">&rarr;</button>
-        <label class="form__label">Transfer to</label>
-        <label class="form__label">Amount</label>
-    </form>
-</div>
 
 <div class="movements">
     <div class="movements__row">
